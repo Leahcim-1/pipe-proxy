@@ -113,7 +113,7 @@ server.on('connection', clientToProxy => {
     })
 
     clientToProxy.on('error', err => {
-        logger.error(`Connection Failed:`, err);
+        logger.error(`Connection Failed: ${err}`);
     })
 })
 
@@ -126,5 +126,5 @@ server.on('error', err => {
 })
 
 server.on("close", () => {
-    logger.info(`Disconnected: ${headers['user-agent']} -> ${method} ${targetAddr}:${targetPort}`);
+    logger.info('Disconnected');
 });
