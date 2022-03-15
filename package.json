@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon index.js",
-    "serve": "pm2 start index.js; pm2 logs"
+    "serve": "pm2 start index.js --name pipe-server; pm2 logs"
   },
   "keywords": [],
   "author": "",
